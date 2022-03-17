@@ -52,9 +52,9 @@ function reset(){
     compScore_span.innerHTML = computerScore;
     play_again.style.display = "none";
     result_p.innerHTML = "";
-    rock_div.style.display = "inline";
-    paper_div.style.display = "inline";
-    scissors_div.style.display = "inline";
+    rock_div.style.display = "inline-block";
+    paper_div.style.display = "inline-block";
+    scissors_div.style.display = "inline-block";
 }
 
 function userWin(){
