@@ -51,12 +51,19 @@ function reset(){
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
     play_again.style.display = "none";
+    result_p.innerHTML = "";
+    rock_div.style.display = "block";
+    paper_div.style.display = "block";
+    scissors_div.style.display = "block";
 }
 
 function userWin(){
     if (userScore == 5){ 
     result_p.innerHTML = "You win!";
     play_again.style.display = "block";
+    rock_div.style.display = "none";
+    paper_div.style.display = "none";
+    scissors_div.style.display = "none";
     computerScore = 0;
     userScore = 0;
     }
@@ -69,6 +76,9 @@ function computerWin(){
     play_again.style.display = "block";      
     computerScore = 0;
     userScore = 0;
+    rock_div.style.display = "none";
+    paper_div.style.display = "none";
+    scissors_div.style.display = "none";
     }
 }
 
