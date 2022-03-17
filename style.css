@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Asap, sans-serif;
+}
+
+body {
+  background-color: #689689;
+}
+
+header {
+  padding: 20px;
+  background: #b2e6d4;
+}
+header > h1 {
+  color: #504136;
+  text-align: center;
+}
+
+.score-board {
+  position: relative;
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 5%;
+  box-shadow: 3px 2px 10px #504136;
+  width: 200px;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 46px;
+  color: white;
+}
+
+.badge {
+  background-color: #a49e8d;
+  border: 0.5px solid white;
+  border-radius: 10%;
+  box-shadow: 2px 1px 5px #504136;
+  color: #504136;
+  font-size: 15px;
+  padding: 2px 10px;
+  font-weight: bold;
+}
+
+#userlabel {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#computerlabel {
+  position: absolute;
+  top: 30px;
+  right: -25px;
+}
+
+.result > p {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  background-color: #689689;
+  padding: 10px;
+}
+
+.result > button {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  color: #689689;
+  background-color: white;
+  padding: 10px;
+}
+
+.choices {
+  text-align: center;
+  padding: 20px;
+}
+
+.choice {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 20px;
+}
+
+.choice > img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 45%;
+  transform: scale(4);
+}
+
+#r > img {
+  filter: invert(37%) sepia(10%) saturate(653%) hue-rotate(179deg)
+    brightness(95%) contrast(88%);
+}
+
+#p > img {
+  filter: invert(96%) sepia(2%) saturate(4228%) hue-rotate(327deg)
+    brightness(104%) contrast(88%);
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #537a6f;
+  transition: all 0.3s ease;
+}
+
+.result:hover {
+  cursor: pointer;
+}
+
+.action-message {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 770px) {
+  .choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .choice {
+    width: 100px;
+    height: 100px;
+  }
+
+  .choice > img {
+    transform: scale(2);
+    bottom: 38%;
+  }
+
+  .result > p {
+    font-size: 20px;
+  }
+
+  .score-board {
+    transform: scale(0.9);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .choice {
+    width: 80px;
+    height: 80px;
+  }
+
+  .choice > img {
+    transform: scale(1.5);
+    bottom: 35%;
+  }
+
+  .score-board {
+    transform: scale(0.75);
+  }
+}
