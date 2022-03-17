@@ -5,9 +5,9 @@ const compScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector (".score-board")
 const result_p = document.querySelector (".result > p");
 var play_again = document.getElementById("playAgain");
-const rock_div = document.getElementById("r");
-const paper_div = document.getElementById("p");
-const scissors_div = document.getElementById("s");
+var rock_div = document.getElementById("r");
+var paper_div = document.getElementById("p");
+var scissors_div = document.getElementById("s");
 
 function getComputerChoice() {
     const choices = ['r', 'p', 's'];
@@ -59,11 +59,11 @@ function reset(){
 
 function userWin(){
     if (userScore == 5){ 
-    result_p.innerHTML = "You win!";
-    play_again.style.display = "block";
     rock_div.style.display = "none";
     paper_div.style.display = "none";
     scissors_div.style.display = "none";
+    result_p.innerHTML = "You win!";
+    play_again.style.display = "block";
     computerScore = 0;
     userScore = 0;
     }
@@ -72,13 +72,13 @@ function userWin(){
 
 function computerWin(){
     if (computerScore == 5){
+    rock_div.style.display = "none";
+    paper_div.style.display = "none";
+    scissors_div.style.display = "none";
     result_p.innerHTML = "You lose!";
     play_again.style.display = "block";      
     computerScore = 0;
     userScore = 0;
-    rock_div.style.display = "none";
-    paper_div.style.display = "none";
-    scissors_div.style.display = "none";
     }
 }
 
