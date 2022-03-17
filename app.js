@@ -51,6 +51,7 @@ function reset(){
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = computerScore;
     play_again.style.display = "none";
+    result_p.innerHTML = "";
 }
 
 function userWin(){
